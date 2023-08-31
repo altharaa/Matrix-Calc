@@ -1,73 +1,134 @@
 * {
-    justify-content: center;
-    align-items: center;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f2f2f2;
     margin: 0;
     padding: 0;
-}
-
-h1 {
-    color: #663399;
-}
-
-.matrix-container {
-    margin: 20px auto;
-    max-width: 600px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .matrix-container {
     display: flex;
-    flex-direction: column;
-}
+    flex-wrap: wrap;
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .matrix {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .matrix-1 {
+    padding-right: 20px;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
 
-table {
+  titleR {
+    text-align: center;
+  }
+  
+  .table {
+    width: 100%;
     border-collapse: collapse;
-    margin: 10px auto;
-    table-layout: fixed; 
-    width: 100%; 
-}
-
-table, th, td {
+  }
+  
+  .table td {
+    padding: 10px;
     border: 1px solid #ccc;
-    padding: 8px;
-    width: auto; 
-    text-align: center; 
-}
-
-.buttons {
-    margin-top: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #663399;
-    color: white;
+    background-color: #f9f9f9;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    height: 40px;
+    background-color: #eee;
     border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-right: 10px;
-}
-
-button:last-child {
-    margin-right: 0;
-}
-
-.result-container {
+    border-radius: 4px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .buttons {
+    align-items: center;
+    height: 40px;
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
-}
-
-.result-container table {
-    border: 2px solid #663399;
-    margin: 10px auto;
-}
-
-.result-container table td {
-    border: 1px solid #663399;
-    padding: 8px;
-}
+  }
+  
+  .buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  #resetBtn {
+    background-color: red;
+    color: white;
+  }
+  
+  #resultMatrix {
+    margin-top: 50px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #resultMatrix td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  .matrix-cell {
+    width: 100%;
+    height: 40px;
+    background-color: #eee;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .button {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  }
